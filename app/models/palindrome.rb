@@ -14,11 +14,10 @@ class Palindrome < ActiveRecord::Base
   include ActiveModel::Validations
   validates_with ValidPalindrome
   validates_uniqueness_of :text
-  validates :text, length: {minimum: 2}
+  validates :text, length: { minimum: 2 }
 
-  attr_accessible :letters, :text
-
-  has_and_belongs_to :sites
+  attr_accessible :letters, :text, :sites
+  has_and_belongs_to_many :sites
 
   private
   def format_text
