@@ -1,0 +1,14 @@
+<table>
+	<thead>
+		<td>Palindrome</td>
+		<td>Count</td>
+	</thead>
+	<tbody>
+		<% @palindromes.each do |palindrome| %>
+			<tr>
+				<td><%= palindrome.text %></td>
+				<td><%= palindrome.letters %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
